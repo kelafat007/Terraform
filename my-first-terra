@@ -1,0 +1,11 @@
+provider "aws" {
+  region = "ca-central-1b"
+
+ }
+  resource "aws_instance" "my_demo_ec2"{
+    ami = "ami-0c3d3a230b9668c02"
+    instance_type = "t2.micro"
+    tags = {
+      "Name" = "my_first_ec2"
+    }
+  }
